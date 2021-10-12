@@ -2,11 +2,17 @@ package org.gyula;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 public class GameImpl implements Game{
 
     public static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
+    @Autowired
     private NumberGenerator numberGenerator;
     private int guessCount = 10;
     private int number;
@@ -16,7 +22,8 @@ public class GameImpl implements Game{
     private int remainingGuesses;
     private boolean isValidNumberRange = true;
 
-    //at the beginning of the game we call this to have the number and other stuff
+    // init
+    @PostConstruct
     @Override
     public void reset() {
         smallest = 0;
@@ -25,8 +32,19 @@ public class GameImpl implements Game{
         guess = 0;
         remainingGuesses = guessCount;
         log.debug("the number is = {}", number);
-
     }
+
+    @PreDestroy
+    public void preDestroy() {
+        log.info("in Game preDestroy");
+    }
+
+    //public methods
+//    public void setNumberGenerator(NumberGenerator numberGenerator) {
+//        this.numberGenerator = numberGenerator;
+//    }
+
+    //at the beginning of the game we call this to have the number and other stuff
 
     @Override
     public int getNumber() {
