@@ -1,6 +1,6 @@
 package org.gyula.console;
 
-import org.gyula.AppConfig;
+import org.gyula.config.AppConfig;
 import org.gyula.MessageGenerator;
 import org.gyula.NumberGenerator;
 import org.slf4j.Logger;

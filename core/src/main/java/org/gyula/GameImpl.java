@@ -3,6 +3,7 @@ package org.gyula;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -14,7 +15,10 @@ public class GameImpl implements Game{
 
     @Autowired
     private NumberGenerator numberGenerator;
-    private int guessCount = 10;
+
+    @Autowired
+    @GuessCount
+    private int guessCount;
     private int number;
     private int guess;
     private int smallest;
@@ -26,10 +30,10 @@ public class GameImpl implements Game{
     @PostConstruct
     @Override
     public void reset() {
-        smallest = 0;
+        smallest = numberGenerator.getMinNumber();
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
-        guess = 0;
+        guess = numberGenerator.getMinNumber();
         remainingGuesses = guessCount;
         log.debug("the number is = {}", number);
     }
@@ -74,6 +78,11 @@ public class GameImpl implements Game{
     @Override
     public int getRemainingGuesses() {
         return remainingGuesses;
+    }
+
+    @Override
+    public int getGuessCount() {
+        return guessCount;
     }
 
     @Override
