@@ -1,11 +1,11 @@
-package org.gyula.console;
+package org.gyula;
 
 import lombok.extern.slf4j.Slf4j;
-import org.gyula.config.GameConfig;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
+@SpringBootApplication
 public class Main {
 //    public static final Logger log = LoggerFactory.getLogger(Main.class);
 
@@ -14,9 +14,11 @@ public class Main {
     public static void main(String[] args) {
         log.info("Guess The Number Game");
 
+        SpringApplication.run(Main.class, args);
+
         //create context (container)
 //        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
+//        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
 //        //get the number generator bean from context (container)
 //        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
@@ -36,7 +38,6 @@ public class Main {
 //        log.info("getResultMessage = {}", messageGenerator.getResultMessage());
 //
         //close context (container)
-        context.close();
 
 
     }
