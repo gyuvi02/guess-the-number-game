@@ -2,7 +2,7 @@ package org.gyula.util;
 
 public final class Viewnames {
 
-    // constants
+    // here come the constants as fields
     public static final String HOME = "home";
 
     // constructor - private, so it cannot be instantiated
