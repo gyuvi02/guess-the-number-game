@@ -9,8 +9,10 @@ import javax.annotation.PostConstruct;
 @Slf4j
 @Component
 public class DecoupledLogicSetup {
+    // fields
     private final SpringResourceTemplateResolver templateResolver;
 
+    // constructor
     public DecoupledLogicSetup(SpringResourceTemplateResolver templateResolver) {
         this.templateResolver = templateResolver;
     }

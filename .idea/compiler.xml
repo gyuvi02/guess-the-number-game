@@ -15,8 +15,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="console" options="-parameters" />
-      <module name="core" options="-parameters" />
+      <module name="console" options="" />
+      <module name="core" options="" />
       <module name="web" options="-parameters" />
     </option>
   </component>
