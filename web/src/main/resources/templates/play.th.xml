@@ -1,7 +1,10 @@
 <thlogic>
     <attr sel="#headId" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#game-title" th:text="#{game.title}"/>
     <attr sel="#main-message" th:text="${__${T(org.gyula.util.AttributeNames).MAIN_MESSAGE}__}"/>
     <attr sel="#result-message" th:text="${__${T(org.gyula.util.AttributeNames).RESULT_MESSAGE}__}"/>
     <attr sel="#game-form" th:action="@{__${T(org.gyula.util.GameMappings).PLAY}__}"/>
+    <attr sel="#enter-guess" th:text="#{enter.guess}"/>
     <attr sel="#footerId" th:replace="~{fragments/footer :: footerFragment}"/>
+    <attr sel="#submit" th:value="#{submit.button}"/>
 </thlogic>

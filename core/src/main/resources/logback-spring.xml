@@ -1,8 +1,8 @@
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
     <logger name="org.gyula" level="DEBUG"/>
-<!--    <logger name="org.springframework" level="INFO"/>-->
-    <logger name="org.springframework" level="DEBUG"/>
-<!--    <logger name="org.springframework" level="TRACE"/>-->
-
+    <logger name="org.springframework" level="INFO"/>
+<!--    <logger name="org.springframework" level="DEBUG"/>-->
+<!--    <logger name="org.springframework" level="TRACE"/> this is the lowest level -->
+    <logger name="org.thymeleaf" level="INFO"/>
 </configuration>
