@@ -1,0 +1,9 @@
+org\gyula\util\GameMappings.class
+org\gyula\util\Viewnames.class
+org\gyula\service\GameService.class
+org\gyula\util\thymeleaf\DecoupledLogicSetup.class
+org\gyula\config\WebConfig.class
+org\gyula\service\GameServiceImpl.class
+org\gyula\WebMain.class
+org\gyula\util\AttributeNames.class
+org\gyula\controller\GameController.class
