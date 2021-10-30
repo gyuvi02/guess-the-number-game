@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns: th="http://www.thymeleaf.org">
-<div th:replace="~{fragments/head :: headFragment}"></div>
+<html lang="en">
+<div id="headId">The game is finished</div>
 <body>
     <div align="center">
-        <h2>Game Over</h2>
-        <h3 th:text="${__${T(org.gyula.util.AttributeNames).RESULT_MESSAGE}__}">
+        <h2 id="game-over"></h2>
+        <h3 id="result-message">
             Result Message Content
         </h3>
         <h3>
-            <a th:href="@{__${T(org.gyula.util.GameMappings).RESTART}__}">
-                Click to play again
-            </a>
+            <a id="restart"></a>
         </h3>
         <h3>
-            <a th:href="@{__${T(org.gyula.util.GameMappings).ROOT}__}">
-                Click to get to start page
-            </a>
+            <a id="root"></a>
         </h3>
 
-        <div th:replace="~{fragments/footer :: footerFragment}"></div>
+        <div id="footerId"></div>
 
     </div>
 </body>

@@ -1,0 +1,12 @@
+<thlogic>
+    <attr sel="#headId" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#game-over" th:text="#{game.over}"/>
+    <attr sel="#result-message" th:text="${__${T(org.gyula.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#restart"
+          th:href="@{__${T(org.gyula.util.GameMappings).RESTART}__}"
+          th:text="#{game.restart}"/>"
+    <attr sel="#root"
+          th:href="@{__${T(org.gyula.util.GameMappings).ROOT}__}"
+          th:text="#{back.to.root}"  />
+    <attr sel="#footerId" th:replace="~{fragments/footer :: footerFragment}"/>
+</thlogic>

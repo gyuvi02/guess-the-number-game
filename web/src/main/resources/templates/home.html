@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns: th="http://www.thymeleaf.org">
+<html lang="en">
 
-<div th:replace="~{fragments/head :: headFragment}"></div>
+<div id="headId">what</div>
 
 <body>
     <div align="center">
-        <h1>Welcome to the Guess the Number Game!</h1>
+        <h1 id="welcome-text"></h1>
         <h3>
-            <a th:href="@{__${T(org.gyula.util.GameMappings).PLAY}__}"
-               th:text="Play" href="play.html">
-                Click to play
+            <a id="playLink">
+<!--                href="play.html"-->
+<!--                Click to play-->
             </a>
         </h3>
 
-        <div th:replace="~{fragments/footer :: footerFragment}">Footer goes here</div>
+        <div id="footerId"></div>
     </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<div id="headId">what</div>
+<html>
+<div id="headId"></div>
 <body>
     <div align="center">
+        <h1 id="game-title"></h1>
         <h3 id="main-message"></h3>
         <h3 id="result-message" >
         </h3>
@@ -10,11 +11,12 @@
         <form id="game-form"
               action="play"
               method="post">
-            <label for="guess">Enter your guess</label>
+            <label id="enter-guess" for="guess"></label>
             <input id="guess" type="number" name="guess"/>
-            <input type="submit" value="Submit"/>
+            <input id="submit" type="submit" value="submit"/>
         </form>
 
+        <br><br>
         <div id="footerId"></div>
 
     </div>
