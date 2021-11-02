@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GameController {
 
+    // fields
     private final GameService gameService;
 
     @Autowired
