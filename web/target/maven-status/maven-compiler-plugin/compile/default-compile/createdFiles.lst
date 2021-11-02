@@ -1,5 +1,6 @@
 org\gyula\util\GameMappings.class
 org\gyula\util\Viewnames.class
+org\gyula\interceptor\RequestInterceptor.class
 org\gyula\service\GameService.class
 org\gyula\util\thymeleaf\DecoupledLogicSetup.class
 org\gyula\config\WebConfig.class
